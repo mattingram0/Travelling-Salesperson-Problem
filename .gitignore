@@ -3,6 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#Ignorable Files
+gkxx72.zip
+gkxx72
+.DS_Store
+
 # C extensions
 *.so
 
