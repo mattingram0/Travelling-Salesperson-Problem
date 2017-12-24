@@ -1,0 +1,57 @@
+Fri 12/15/17  01:26:47 PM
+
+directory: AI Search Assignment ...
+error: no sets of tour-files are present
+
+directory: IP Assignment ...
+error: no sets of tour-files are present
+
+directory: gkxx72 ...
+TourfileA...
+.DS_Store: no tour-file present
+AISearchfile012.txt: good (length of tour is 56)
+AISearchfile017.txt: good (length of tour is 1444)
+AISearchfile021.txt: good (length of tour is 3055)
+AISearchfile026.txt: no tour-file present
+AISearchfile042.txt: good (length of tour is 1419)
+AISearchfile048.txt: no tour-file present
+AISearchfile058.txt: no tour-file present
+AISearchfile175.txt: no tour-file present
+AISearchfile180.txt: good (length of tour is 1950)
+AISearchfile535.txt: no tour-file present
+TourfileB...
+.DS_Store: no tour-file present
+AISearchfile012.txt: good (length of tour is 56)
+AISearchfile017.txt: good (length of tour is 1444)
+AISearchfile021.txt: good (length of tour is 2549)
+AISearchfile026.txt: good (length of tour is 1473)
+AISearchfile042.txt: good (length of tour is 1189)
+AISearchfile048.txt: good (length of tour is 12274)
+AISearchfile058.txt: good (length of tour is 25406)
+AISearchfile175.txt: good (length of tour is 21594)
+AISearchfile180.txt: good (length of tour is 1960)
+AISearchfile535.txt: good (length of tour is 49902)
+
+Best tours:
+
+.DS_Store: there is no best tour!
+AISearchfile012.txt: best tour has length 56
+AISearchfile012.txt winners : gkxx72
+AISearchfile017.txt: best tour has length 1444
+AISearchfile017.txt winners : gkxx72
+AISearchfile021.txt: best tour has length 2549
+AISearchfile021.txt winners : gkxx72
+AISearchfile026.txt: best tour has length 1473
+AISearchfile026.txt winners : gkxx72
+AISearchfile042.txt: best tour has length 1189
+AISearchfile042.txt winners : gkxx72
+AISearchfile048.txt: best tour has length 12274
+AISearchfile048.txt winners : gkxx72
+AISearchfile058.txt: best tour has length 25406
+AISearchfile058.txt winners : gkxx72
+AISearchfile175.txt: best tour has length 21594
+AISearchfile175.txt winners : gkxx72
+AISearchfile180.txt: best tour has length 1950
+AISearchfile180.txt winners : gkxx72
+AISearchfile535.txt: best tour has length 49902
+AISearchfile535.txt winners : gkxx72
