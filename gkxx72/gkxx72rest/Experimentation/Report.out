@@ -1,9 +1,0 @@
-\BOOKMARK [1][-]{section.1}{Implementation}{}% 1
-\BOOKMARK [1][-]{section.2}{Experimentation}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Nearest Neighbour Heuristic}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Nearest Neighbour and Distance to Start Heuristic}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Minimum Spanning Tree Heuristic \(Non-admissible\)}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.4}{Minimum Spanning Tree Heuristic \(Admissible\)}{section.2}% 6
-\BOOKMARK [2][-]{subsection.2.5}{Greedy Completion Heuristic and IDA*}{section.2}% 7
-\BOOKMARK [1][-]{section.3}{Implementation}{}% 8
-\BOOKMARK [1][-]{section.4}{Experimentation}{}% 9
