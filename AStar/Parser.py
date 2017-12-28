@@ -5,7 +5,7 @@ import re
 def loadSearchFile(name):
     # path = 'J:\DUDE\Desktop\Software Methodologies\AI Search Assignment\Search Files\\' + name
     # path = '/Volumes/gkxx72/DUDE/Desktop/Software Methodologies/AI Search Assignment/Search Files/' + name
-    path = '/Users/matt/Documents/Durham/2nd Year/Software Methodologies/AI Search Assignment/checker/gkxx72/cityfiles/' + name
+    path = '/Users/matt/Documents/Durham/2nd Year/Software Methodologies/AI Search Assignment/Experimentation/checker/cityfiles/' + name
     f = open(path, 'r')
     raw = f.read()
 

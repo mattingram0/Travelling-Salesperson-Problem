@@ -9,9 +9,10 @@ import time
 
 UPDATED = '<updated-node>'
 
+
 def main():
 
-    filename = "AISearchfile017.txt"
+    filename = "AISearchfile058.txt"
     pQueue = []
 
     distances = Parser.loadSearchFile(filename)  # Distance matrix
@@ -51,7 +52,7 @@ def main():
                         length = pTour.g + node.dist
                 break
 
-    Writer.writeTourFile(filename, numNodes, length, tour)
+    # Writer.writeTourFile(filename, numNodes, length, tour)
     tourString = ",".join(str(t) for t in tour)
     print "Start Location: " + tour[0] + " - Distance: " + str(
         length) + " - Tour: " + tourString
@@ -64,9 +65,10 @@ def expand(pTour, children, graph, numNodes, pQueue, distances):
         if child.name not in pTour.path:  # If child not already in the p. tour
 
             gNew = pTour.g + child.dist  # Calc cost to child
+            # hNew = heuristicGC(child, graph, pTour, numNodes)
             hNew = mstHeuristicAdmiss(child, pTour, graph, numNodes, distances)
-            #hNew = heuristicNNDTS(child, pTour, graph, distances)
-            #hNew = mstHeuristicLog(distances, child, pTour)
+            # hNew = heuristicNNDTS(child, pTour, graph, distances)
+            # hNew = mstHeuristicLog(distances, child, pTour)
 
             fNew = gNew + hNew
 
@@ -294,12 +296,57 @@ def heuristicNNDTS(child, pTour, graph, distances):  # Chooses nearest neighbour
     return total
 
 
-def heuristicGC(child, graph):  # Greedy completion, unfinished
+def heuristicGC(child, graph, pTour, numNodes):  # Greedy completion, unfinished
 
-    nodelist = []
+    distToNeighbour = heuristicNN(child, pTour, graph)
 
-    for node in graph.get(child.name):
-        heapq.heappush(nodelist, node)
+    unvisited = []
+
+    for i in range(numNodes):
+        if str(i) not in pTour.path and str(i) != child.name and str(
+                i) != pTour.endNode:
+            unvisited.append(str(i))
+
+    if len(unvisited) == 0: 
+        return 0
+
+    pGreedyTour = [unvisited[0]]
+    unvisited.remove(unvisited[0])
+    minimum = sys.maxsize
+    length = 0
+
+    while len(unvisited) != 0:
+
+        minimum = sys.maxsize
+
+        for child in graph.get(pGreedyTour[-1]):  # For each child
+            if child.name in unvisited:
+                if child.dist < minimum:
+                    minimum = child.dist
+                    closest = child.name
+
+        length += minimum
+
+        pGreedyTour.append(closest)
+        unvisited.remove(closest)
+
+    nodes = graph.get(pGreedyTour[-1])
+
+    distToStart = sys.maxsize
+
+    if len(pTour.path) == 0 and pTour.endNode == "":  # i.e if pTour == []
+        distToStart = 0
+    else:
+        if len(pTour.path) == 0:  # if pTour = [1] but path = []
+            startNeighbours = graph.get(pTour.endNode)
+        else:  # if path = [i, ...]
+            startNeighbours = graph.get(pTour.path[0])
+        for city in unvisited:
+            for node in startNeighbours:
+                if city == node.name and node.dist < distToStart:
+                    distToStart = node.dist
+
+    return length
 
 
 def push(pQueue, entryMap, shortestDist, node): 

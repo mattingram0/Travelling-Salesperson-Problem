@@ -1,6 +1,6 @@
 def writeTourFile(filename, size, length, tour):
 
-    path = '/Users/matt/Documents/Durham/2nd Year/Software Methodologies/AI Search Assignment/checker/gkxx72/TourfileA/tour' + filename
+    path = '/Users/matt/Documents/Durham/2nd Year/Software Methodologies/AI Search Assignment/Experimentation/checker/gkxx72/TourfileA/' + filename
     f = open(path, "w+")
     data = "NAME = " + filename[:len(filename) - 4] + ",\nTOURSIZE = " + str(
         size) + ",\nLENGTH = " + str(length) + ",\n"
